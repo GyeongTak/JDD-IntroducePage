@@ -1,2 +1,2 @@
-# JDD-IntroducePage
-LG CNS AM INSPIRE CAMP 팀소개(JDD) 페이지 제작
+# <JDD 팀원 소개 페이지>
+LG CNS AM INSPIRE CAMP 3기 초기팀 JDD에 대한 팀원  소개 페이지입니다.
