@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: "Arial", sans-serif;
   color: white;
-  background: linear-gradient(to bottom, #131314 0%, #131314 50%, #194FA5 100%);
+  background: linear-gradient(to bottom, #131314 0%, #131314 50%, #194fa5 100%);
 }
 
 .hero {
@@ -71,6 +71,17 @@ body {
 }
 
 .section {
-  padding: 100px 20px;
+  padding: 100px;
   min-height: 100vh;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 160px 100px 50px 100px;
+}
+
+.footer a {
+  color: #fff;
 }
