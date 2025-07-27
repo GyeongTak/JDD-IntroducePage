@@ -1,14 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JDD Introduction</title>
-
-    <!-- CSS 연결-->
     <link rel="stylesheet" href="../css/style.css" />
-</head>
-<body>
-   
-</body>
+  </head>
+  <body>
+    <section class="hero" id="main">
+      <div class="logo">
+        <h1>JDD</h1>
+        <p>"Ju-Dung-A-ri Driven Developers"</p>
+      </div>
+
+      <nav class="menu">
+        <a href="#main" class="menu-item active">What is JDD?</a>
+        <a href="#members" class="menu-item">Members</a>
+        <a href="#about" class="menu-item">About Us</a>
+        <a href="#value" class="menu-item">Value of JDD</a>
+      </nav>
+    </section>
+
+    <section id="members" class="section">
+      <h2>Members</h2>
+      <!-- TODO: 멤버 소개 영역 -->
+    </section>
+
+    <section id="about" class="section">
+      <h2>About Us</h2>
+      <!-- TODO: About Us 영역 -->
+    </section>
+
+    <section id="value" class="section">
+      <h2>Value of JDD</h2>
+      <!-- TODO: JDD 가치 영역 -->
+    </section>
+
+    <footer class="footer">
+      <p>
+        © 2025 Team JDD |
+        <a href="https://github.com/Lee-WonJun/JDD-Description"> Reference </a>
+      </p>
+    </footer>
+
+    <script>
+      const menuItems = document.querySelectorAll(".menu-item");
+
+      menuItems.forEach((item) => {
+        item.addEventListener("click", (e) => {
+          e.preventDefault();
+          document.querySelector(item.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+
+          menuItems.forEach((el) => el.classList.remove("active"));
+          item.classList.add("active");
+        });
+      });
+    </script>
+  </body>
 </html>

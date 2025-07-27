@@ -1,4 +1,87 @@
 body {
-  background: linear-gradient(to bottom, #000000, #152039, #30425e); /* 블랙 → 네이비 그라데이션 */
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  color: white;
+  background: linear-gradient(to bottom, #131314 0%, #131314 50%, #194fa5 100%);
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.logo h1 {
+  font-size: 180px;
+  font-weight: 700;
+  line-height: 176px;
+  margin: 0;
+}
+
+.logo p {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.menu {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: transparent;
+  border-bottom: 1px solid #ffffff33;
+  font-style: italic;
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  position: relative;
+  padding: 16px 0;
+  text-decoration: none;
+  color: #f0f0f09e;
+  font-size: 18px;
+  font-weight: 300;
+  transition: color 0.3s, font-weight 0.3s;
+  flex: 1 1 25%;
+  text-align: center;
+}
+
+.menu-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  transition: width 0.3s;
+}
+
+.menu-item.active {
+  color: white;
+  font-weight: bold;
+}
+
+.menu-item.active::after {
+  width: 100%;
+}
+
+.section {
+  padding: 100px;
   min-height: 100vh;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 160px 100px 50px 100px;
+}
+
+.footer a {
+  color: #fff;
 }
