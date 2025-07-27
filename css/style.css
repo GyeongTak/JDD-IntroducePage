@@ -1,10 +1,8 @@
 body {
-  background: linear-gradient(to bottom, #000000, #152039, #30425e); /* 블랙 → 네이비 그라데이션 */
-  min-height: 100vh;
   margin: 0;
   font-family: "Arial", sans-serif;
-  background-color: #0e0e0e;
   color: white;
+  background: linear-gradient(to bottom, #131314 0%, #131314 50%, #194FA5 100%);
 }
 
 .hero {
@@ -74,6 +72,5 @@ body {
 
 .section {
   padding: 100px 20px;
-  background-color: #111;
   min-height: 100vh;
 }
