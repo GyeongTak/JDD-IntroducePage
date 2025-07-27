@@ -1,0 +1,4 @@
+body {
+  background: linear-gradient(to bottom, #000000, #152039, #30425e); /* 블랙 → 네이비 그라데이션 */
+  min-height: 100vh;
+}
