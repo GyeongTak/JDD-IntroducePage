@@ -63,3 +63,50 @@ const members = [
     github: "https://github.com/changchangdaero"
   },
 ];
+
+document.addEventListener("DOMContentLoaded", () => {
+  const memberList = document.querySelector(".memberList");
+
+  members.forEach((member) => {
+    const card = document.createElement("div");
+    card.classList.add("memberCard");
+    card.dataset.name = member.name;
+    card.dataset.mbti = member.mbti;
+    card.dataset.field = member.field;
+    card.dataset.stack = member.stack;
+    card.dataset.comment = member.comment;
+    card.dataset.github = member.github;
+
+    card.innerHTML = `
+      <img src="${member.prfImg}" alt="${member.name}" />
+      <p>${member.name}</p>
+    `;
+    
+    memberList.appendChild(card);
+  });
+
+  const detailSection = document.querySelector(".memberDetail");
+  const detailImg = document.getElementById("detailImg");
+  const detailName = document.getElementById("detailName");
+  const detailMbti = document.getElementById("detailMbti");
+  const detailField = document.getElementById("detailField");
+  const detailStack = document.getElementById("detailStack");
+  const detailComment = document.getElementById("detailComment");
+  const detailGithub = document.getElementById("detailGithub");
+
+  const memberCards = document.querySelectorAll(".memberCard");
+
+  memberCards.forEach(card => {
+    card.addEventListener("click", () => {
+      detailImg.src = card.querySelector("img").src;
+      detailName.textContent = card.dataset.name;
+      detailMbti.textContent = card.dataset.mbti;
+      detailField.textContent = card.dataset.field;
+      detailStack.textContent = card.dataset.stack;
+      detailComment.textContent = card.dataset.comment;
+      detailGithub.href = card.dataset.github;
+
+      detailSection.style.display = "flex"; 
+    });
+  });
+});``
