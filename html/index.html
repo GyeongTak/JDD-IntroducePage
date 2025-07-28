@@ -71,27 +71,7 @@
           menuItems.forEach((el) => el.classList.remove("active"));
           item.classList.add("active");
         });
-      });
-
-      // memberList
-      const memberList = document.querySelector(".memberList");
-
-      members.forEach((member) => {
-        const card = document.createElement("div");
-        card.classList.add("memberCard");
-        card.dataset.name = member.name; 
-        card.dataset.mbti = member.mbti;
-        card.dataset.field = member.field;
-        card.dataset.stack = member.stack;
-        card.dataset.comment = member.comment;
-        card.dataset.github = member.github;
-        card.innerHTML = `
-    <img src="${member.prfImg}" alt="${member.name}" />
-    <p>${member.name}</p>
-  `;
-        memberList.appendChild(card);
-      });
-
+      });`
       
     </script>
   </body>
