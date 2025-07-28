@@ -5,7 +5,7 @@ const members = [
     mbti: "ESFJ",
     field: "풀스택 개발자",
     stack: "C, Python, JAVA, JS, Mysql, Node.js",
-    commet: "창의력과 실력을 바탕으로 우리 사회에 도움이 되는 프로그램을 개발하는 것이 목표인 개발자 변경탁입니다. 끊임없이 배우고 발전하도록 하겠습니다! ",
+    comment: "창의력과 실력을 바탕으로 우리 사회에 도움이 되는 프로그램을 개발하는 것이 목표인 개발자 변경탁입니다. 끊임없이 배우고 발전하도록 하겠습니다! ",
     github:"https://github.com/GyeongTak"
   },
   {
@@ -110,3 +110,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });``
+
+// 버튼 요소 가져오기
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+// 스크롤 시 버튼 표시/숨기기
+window.onscroll = function () {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    scrollTopBtn.style.display = "block";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
+};
+
+// 버튼 클릭 시 nav bar로 이동
+scrollTopBtn.onclick = function () {
+  window.scrollTo({
+    top: 200,
+    behavior: "smooth"
+  });
+};

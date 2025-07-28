@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
+    <button id="scrollTopBtn">↑ Top</button> <!-- 스크롤 내리면 우측 하단에 버튼 생성 -->
+
     <section class="hero" id="main">
       <div class="logo">
         <h1>JDD</h1>
@@ -105,8 +107,6 @@
                 <p>일단 코드를 써라. <br>그러면 열정적인 동료가 리팩토링해 줄 것이다.</p>
             </div>
 
-            
-
             <div class="value-card">
                 <h3>기획</h3>
                 <p>위에서 나온 결과물을 가지고 쪼면 <br>개발자들이 퍼포먼스가 안 나온다고 말해라.</p>
@@ -139,27 +139,6 @@
 
       });
 
-    /*
-
-      // memberList
-      const memberList = document.querySelector(".memberList");
-
-      members.forEach((member) => {
-        const card = document.createElement("div");
-        card.classList.add("memberCard");
-        card.dataset.name = member.name; 
-        card.dataset.mbti = member.mbti;
-        card.dataset.field = member.field;
-        card.dataset.stack = member.stack;
-        card.dataset.comment = member.comment;
-        card.dataset.github = member.github;
-        card.innerHTML = `
-    <img src="${member.prfImg}" alt="${member.name}" />
-    <p>${member.name}</p>
-  `;
-        memberList.appendChild(card);
-      });
-
       // 날짜 계산
       function updateDaysTogether() {
         const startDate = new Date("2025-07-22"); 
@@ -170,7 +149,7 @@
       }
 
       updateDaysTogether();
-      */
+      
     </script>
   </body>
 </html>
