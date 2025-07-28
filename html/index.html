@@ -29,10 +29,41 @@
       <!-- TODO: 멤버 상세 소개 부분 -->
     </section>
 
+      <!-- About Us -->
     <section id="about" class="section">
-      <h2>About Us</h2>
-      <!-- TODO: About Us 영역 -->
+      <h2>ABOUT US</h2>
+
+      <div class="about-container">
+        <div class="about-item">
+          <div class="about-card">
+            <h3>7</h3>
+          </div>
+          <p>팀원 수</p>
+        </div>
+
+        <div class="about-item">
+          <div class="about-card">
+            <h3>5 / 2</h3>
+          </div>
+          <p>MBTI (I / E)</p>
+        </div>
+
+        <div class="about-item">
+          <div class="about-card">
+            <h3 id="daysTogether">0일</h3>
+          </div>
+          <p>함께한 일수</p>
+        </div>
+
+        <div class="about-item">
+          <div class="about-card">
+            <h3>100%</h3>
+          </div>
+          <p>친밀도 (%)</p>
+        </div>
+      </div>
     </section>
+
 
     <section id="value" class="section">
       <h2>Value of JDD</h2>
@@ -74,6 +105,17 @@
   `;
         memberList.appendChild(card);
       });
+
+      // 날짜 계산
+      function updateDaysTogether() {
+        const startDate = new Date("2025-07-22"); 
+        const today = new Date();
+        const diffTime = today - startDate;
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1; 
+        document.getElementById("daysTogether").textContent = `${diffDays}일`;
+      }
+
+      updateDaysTogether();
     </script>
   </body>
 </html>
