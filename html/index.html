@@ -22,8 +22,11 @@
     </section>
 
     <section id="members" class="section">
+      <img src="../img/jddshadow.svg" alt="" class="shadow" />
       <h2>Members</h2>
-      <!-- TODO: 멤버 소개 영역 -->
+      <div class="memberList"></div>
+
+      <!-- TODO: 멤버 상세 소개 부분 -->
     </section>
 
     <section id="about" class="section">
@@ -42,8 +45,9 @@
         <a href="https://github.com/Lee-WonJun/JDD-Description"> Reference </a>
       </p>
     </footer>
-
+    <script src="../members.js"></script>
     <script>
+      // menu
       const menuItems = document.querySelectorAll(".menu-item");
 
       menuItems.forEach((item) => {
@@ -56,6 +60,19 @@
           menuItems.forEach((el) => el.classList.remove("active"));
           item.classList.add("active");
         });
+      });
+
+      // memberList
+      const memberList = document.querySelector(".memberList");
+
+      members.forEach((member) => {
+        const card = document.createElement("div");
+        card.classList.add("memberCard");
+        card.innerHTML = `
+    <img src="${member.prfImg}" alt="${member.name}" />
+    <p>${member.name}</p>
+  `;
+        memberList.appendChild(card);
       });
     </script>
   </body>
