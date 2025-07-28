@@ -26,6 +26,17 @@
       <h2>Members</h2>
       <div class="memberList"></div>
 
+      <div class="memberDetail" style="display: none;">
+        <img id="detailImg" src="" alt="프로필 이미지" />
+        <div class="detailInfo">
+          <h3 id="detailName"></h3>
+          <p><strong>MBTI:</strong> <span id="detailMbti"></span></p>
+          <p><strong>희망 분야:</strong> <span id="detailField"></span></p>
+          <p><strong>기술 스택:</strong> <span id="detailStack"></span></p>
+          <p><strong>한마디:</strong> <span id="detailComment"></span></p>
+          <p><strong>GitHub:</strong> <a id="detailGithub" href="#" target="_blank">바로가기</a></p>
+        </div>
+      </div>
       <!-- TODO: 멤버 상세 소개 부분 -->
     </section>
 
@@ -99,6 +110,12 @@
       members.forEach((member) => {
         const card = document.createElement("div");
         card.classList.add("memberCard");
+        card.dataset.name = member.name; 
+        card.dataset.mbti = member.mbti;
+        card.dataset.field = member.field;
+        card.dataset.stack = member.stack;
+        card.dataset.comment = member.comment;
+        card.dataset.github = member.github;
         card.innerHTML = `
     <img src="${member.prfImg}" alt="${member.name}" />
     <p>${member.name}</p>
@@ -116,6 +133,7 @@
       }
 
       updateDaysTogether();
+      
     </script>
   </body>
 </html>
