@@ -96,6 +96,11 @@ body {
   justify-content: center;
 }
 
+.memberDetail {
+  display: flex;
+  align-items: center;
+}
+
 #members {
   padding: 0;
   position: relative;
